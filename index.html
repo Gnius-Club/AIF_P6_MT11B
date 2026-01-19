@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playbook-P6-TM11B</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Playbook-P6-TM11</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <h1><span class="book-icon">📋</span> <strong>Playbook Sesión 11B 6to Primaria</strong></h1>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 11 - 6o de Primaria</strong></h1>
         <div class="header-widgets">
             <div class="timer-container">
-                <span id="timer">⏱️ 00:00</span>
-                <button id="startStop">Start</button>
-                <button id="reset">Reset</button>
+                <span id="global-timer">⏱️ 40:00</span>
+                <button id="global-start-stop">Start</button>
+                <button id="global-reset">Reset</button>
             </div>
             <div class="theme-toggle">
                 <i class="fas fa-sun"></i>
@@ -28,7 +27,6 @@
             </div>
         </div>
     </header>
-
     <div class="main-container">
         <aside class="activity-list">
             <h2>Actividades</h2>
@@ -38,208 +36,406 @@
                 <li><a href="#activity-2">2</a></li>
                 <li><a href="#activity-3">3</a></li>
                 <li><a href="#activity-4">4</a></li>
+                <li><a href="#activity-5">5</a></li>
             </ul>
         </aside>
-
         <main class="content">
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
-
-            <button id="toggle-dialogues">Mostrar todos los diálogos</button>
-
+            <!-- ACTIVIDAD 0: DE UN VISTAZO -->
             <div class="activity-card" id="activity-0">
-                <h2><span class="book-icon">📝</span> De un Vistazo Sesión Gnius</h2>
-                <p class="overview-subtitle">Resumen rápido de objetivos, materiales y preparación para el facilitador.</p>
-                <div class="overview-table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
-                                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <strong>Objetivos de Aprendizaje</strong>
-                                    <ul>
-                                        <li>Que los estudiantes implementen los dos programas diferentes para sus robots XGO, prueben el sistema de comunicación por radio y depuren la misión colaborativa, enfocándose en la sincronización y la correcta transmisión de información entre los agentes.</li>
-                                    </ul>
-                                    <strong>Secuencia de Clase</strong>
-                                    <ul>
-                                        <li>⚡Bienvenida y Conexión</li>
-                                        <li>⚡IMPLEMENTACIÓN DEL CÓDIGO (Ejecución)</li>
-                                        <li>⚡PRUEBAS, OBSERVACIÓN Y DEBUGGING COLABORATIVO</li>
-                                        <li>⚡GNIUS STORM Y REINICIO DEL CICLO</li>
-                                    </ul>
-                                    <strong>Entregable Clave</strong>
-                                    <ul>
-                                        <li>Sistema de dos robots colaborando para completar una misión, demostrado por cada grupo.</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <strong>Materiales Específicos</strong>
-                                    <ul>
-                                        <li>Proyector o pantalla interactiva.</li>
-                                        <li>Conexión a internet estable.</li>
-                                        <li>Acceso al entorno de programación Python en las computadoras.</li>
-                                        <li>Robots XGO V2 (2 por cada 2 equipos de 4 estudiantes, total 8 estudiantes), cargados.</li>
-                                        <li>Los "Protocolos de Comunicación" creados por cada equipo en la Sesión 11A.</li>
-                                        <li>Presentación de diapositivas.</li>
-                                        <li>Chat de Agente Gnius (Xolo) activo para consultas de debugging.</li>
-                                    </ul>
-                                    <strong>Preparación Previa para ESTA Sesión</strong>
-                                    <ol>
-                                        <li><strong>Revisión de Misión (Interna)</strong>
-                                            <ul>
-                                                <li>Verificar conexión a internet y que el entorno Python funcione.</li>
-                                                <li>Asegurar que los robots XGO V2 estén completamente cargados.</li>
-                                                <li>Tener la presentación de diapositivas lista.</li>
-                                                <li>Probar el chat Agente Gnius (Xolo) para consultas.</li>
-                                            </ul>
-                                        </li>
-                                        <li><strong>Familiarización</strong> Revisar el flujo de la sesión, los diálogos sugeridos y la logística de compartir los robots entre equipos.</li>
-                                    </ol>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <h2><span class="book-icon">📝</span> De un Vistazo: Comando Central</h2>
+                <p class="overview-subtitle">Todo lo que necesitas para preparar y ejecutar esta misión en minutos.</p>
+                
+                <div class="command-section">
+                    <h3>🎯 Objetivo de Aprendizaje</h3>
+                    <div class="objective-box">
+                        <p><strong>Los estudiantes podrán:</strong> Usar Micro:Bit y XGO para coordinar movimientos sincronizados mediante radio y comprender el funcionamiento de los sistemas multi-agente y la colaboración robótica.</p>
+                    </div>
+                </div>
+                <div class="command-section xolo-prompt">
+                    <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                        <pre id="main-prompt">Xolo, quiero aprender cómo dos robots pueden actuar como un solo equipo. Explícame qué significa que esto sea un sistema multi-agente y por qué la comunicación es clave para que dos robots no se descoordinen. Luego guíame paso a paso para construir una coreografía de 3 fases donde cada robot tenga su propio programa, pero ambos estén sincronizados con mensajes de radio. Quiero que me enseñes a usar: 1) radio.send() y radio.receive() para activar fases. 2) una variable de estado (estado_actual) para saber qué parte del baile toca. 3) movimientos de locomoción y postura para que el dúo se vea coordinado. Incluye debugging con print() para verificar si los mensajes llegan a tiempo y si ambos robots están en el mismo “estado”. Al final evalúame con 3 preguntas rápidas: ¿qué pasa si un mensaje se pierde?, ¿cómo lo detecto?, ¿cómo lo hago más robusto?</pre>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>⚡ Puntos Esenciales de la Misión</h3>
+                    <div class="essentials-grid">
+                        <div class="essential-card">
+                            <div class="essential-icon">🎓</div>
+                            <h4>Concepto Clave</h4>
+                            <p>Sistemas Multi-Agente: Es cuando varios robots trabajan juntos como un equipo, comunicándose para lograr una meta común, como un equipo de fútbol coordinado.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🔧</div>
+                            <h4>Habilidad Técnica</h4>
+                            <p>Usar mensajes de radio para que dos robots XGO realicen movimientos sincronizados.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🧪</div>
+                            <h4>Experimentación</h4>
+                            <p>Probar con diferentes tiempos de espera (delays) y grupos de radio para entender cómo afecta la sincronización de la coreografía.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">💬</div>
+                            <h4>Interacción con XOLO</h4>
+                            <p>XOLO ya conoce a cada estudiante y el tema de hoy. Solo abren el chat y comienzan a aprender. Tú guías el timing y motivación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>📦 Checklist de Materiales</h3>
+                    <div class="materials-checklist">
+                        <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
+                        <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
+                        <label><input type="checkbox"> 1 Micro:Bit por cada 2 estudiantes</label><label><input type="checkbox"> 1 Robot XGO por cada 4 estudiantes</label><label><input type="checkbox"> 1 Smart A.I. Lens por cada 4 estudiantes</label>
+                        <label><input type="checkbox"> Acceso a <a href="https://makecode.microbit.org/" target="_blank">MakeCode</a> con extensión XGO instalada</label>
+                        <label><input type="checkbox"> Espacio despejado para la coreografía</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa programación con BLOQUES en MakeCode</label>
+                        <label><input type="checkbox"> 📋 Para agregar extensión: En MakeCode → Extensiones → Buscar 'XGO' → Agregar</label>
+                    </div>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> Manipular con cuidado, no forzar las patas del XGO, mantener en superficie plana y verificar que las baterías estén cargadas.</p>
+                </div>
+                <div class="command-section">
+                    <h3>🗓️ Secuencia de la Misión (40 min)</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-content">
+                                <strong>Intro a la Misión</strong>
+                                <span class="time-badge">2 min</span>
+                                <p>Bienvenida, I Can Statement y contexto de la misión.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-content">
+                                <strong>A.I. Gym</strong>
+                                <span class="time-badge">8 min</span>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre sistemas multi-agente y coordinación por radio (sin prompt específico).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-content">
+                                <strong>Brain Spark</strong>
+                                <span class="time-badge">20 min</span>
+                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-content">
+                                <strong>Gnius STORM - Compartir</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Demostración y reflexión en parejas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">5</div>
+                            <div class="timeline-content">
+                                <strong>Entrega de Evidencias</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Subir capturas a Gnius Space y finalizar misión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>🚨 Resolución Rápida de Problemas</h3>
+                    <div class="troubleshooting-list">
+                        <ul>
+                            <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
+                            <li><strong>Si los robots no se sincronizan:</strong> Asegúrate de que ambos Micro:bits estén en el mismo número de grupo de radio.</li><li><strong>Si el XGO no realiza los movimientos:</strong> Verifica que la extensión XGO esté cargada y que el Micro:bit esté bien conectado al robot.</li><li><strong>Si hay errores en el código:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            
+            <!-- ACTIVIDAD 1: INTRO A LA MISIÓN -->
             <div class="activity-card" id="activity-1">
-                <h2>⚡ Actividad 1: Bienvenida y Conexión ⏰ 2 minutos</h2>
-                <p><strong>Propósito:</strong> Recordar el trabajo previo, establecer el objetivo del día y preparar el entorno de trabajo para la sesión práctica.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Bienvenida y Conexión con Sesión A ⏰ 1 minuto</h3>
-                            <p>(Proyectar Diapositiva 2) Da la bienvenida, recuérdales el trabajo de diseño de la Sesión A y crea expectación.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Hola de nuevo, estrategas! ¡Bienvenidos a la Sesión B! En la sesión pasada diseñaron unos "Protocolos de Comunicación" para que sus robots trabajaran en equipo. Hoy es el día de ejecutar esas misiones y ver si la colaboración funciona. ¿Listos para la prueba de comunicación?</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>🚀 Actividad 1: Intro a la Misión</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 2:00</span>
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Guía de Conexión y Preparación ⏰ 1 minuto</h3>
-                            <p>(Proyectar Diapositiva 3) Guía a los equipos para que se preparen técnicamente para la sesión, explicando la logística.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Equipos, hoy cada uno de ustedes programará un cerebro diferente. Dividan los roles: un sub-equipo programará al Robot A (Explorador) y el otro al Robot B (Rescatista). ¡La sincronización es clave! Como compartiremos los robots entre dos equipos, asegúrense de coordinarse para cargar sus programas y probarlos por turnos.</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Dar la bienvenida con energía.</li>
+                            <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
+                            <li>Proyecta diapositiva 1 con el I Can Statement.</li>
+                            <li>Motiva: "¡Hoy le daremos mente de equipo a sus robots XGO!".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <ul>
+                            <li>XOLO ya está listo y conoce a cada estudiante.</li>
+                            <li>Sabe que hoy toca aprender sobre Sistemas multi-agente y coordinación robótica..</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Escucha la misión del día.</li>
+                            <li>Loguearse en Gnius Space.</li>
+                            <li>Preparación para trabajar en parejas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 1: I Can Statement</h4>
+                    <div class="slide-content">
+                        <p><strong>🎯 Hoy seré capaz de:</strong></p>
+                        <p class="highlight-text">🤖 A coordinar dos robots por radio para que realicen una coreografía sincronizada.</p>
+                        <p><strong>Aplicación real:</strong> Los enjambres de drones en espectáculos de luces usan esta tecnología para moverse juntos sin chocar.</p>
+                        <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 2: A.I. GYM -->
             <div class="activity-card" id="activity-2">
-                <h2>⚡ Actividad 2: IMPLEMENTACIÓN DEL CÓDIGO (Ejecución) ⏰ 13 minutos</h2>
-                <p><strong>Propósito</strong> Poner en práctica el plan, verificando primero la comunicación por radio y luego ejecutando la misión colaborativa completa.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Prueba de Comunicación Básica ⏰ 6 minutos</h3>
-                            <p>(Proyectar Diapositiva 4) Guía a los equipos para que realicen la prueba fundamental: asegurarse de que la radio funciona antes de intentar la misión compleja.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Ahora que están listos, vamos con su Prueba 1. Antes de la misión completa, carguen un código simple en ambos robots. El Robot A debe enviar "Hola" cada 2 segundos, y el Robot B debe recibirlo y mostrarlo. Esto nos asegura que la radio funciona. ¡Coordinen con su equipo compañero para usar los robots!</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>🧠 Actividad 2: A.I. Gym</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 8:00</span>
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Ejecución de la Misión Completa ⏰ 7 minutos</h3>
-                            <p>(Proyectar Diapositiva 5) Guía a los equipos para que ejecuten simultáneamente sus dos programas y observen la colaboración en acción.</p>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 2.</li>
+                            <li>Indica: "Abran el chat con XOLO y salúdenlo. Él ya sabe qué les va a enseñar hoy."</li>
+                            <li>Circula para asegurar que todos interactúan con XOLO.</li>
+                            <li>Si alguien tiene dudas, recuérdale: "Pregúntale a XOLO, él te puede explicar de otra forma".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
+                            <li>Explica cómo enviar y recibir mensajes por radio para activar fases de movimiento.</li>
+                            <li>Introduce el concepto de sistemas multi-agente y comunicación efectiva.</li>
+                            <li>Responde dudas sobre los conceptos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Abrir el chat con XOLO y saludarlo.</li>
+                            <li>Aprender a usar radio.send y radio.receive para coordinar robots.</li>
+                            <li>Aprender sobre la importancia de la sincronización en equipos de robots.</li>
+                            <li>Despejar todas sus dudas preguntando a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 2: A.I. GYM</h4>
+                    <div class="slide-content">
+                        <p><strong>💬 Abre el chat con XOLO y salúdalo:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Perfecto. Ahora que sabemos que la radio funciona, carguen los códigos completos de su misión en sus respectivos robots. Ejecútenlos al mismo tiempo. El Robot A debería empezar a buscar, mientras el Robot B espera la señal. ¡Observen con atención si la colaboración funciona!</p>
-                            </div>
-                        </div>
+                        <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
+                        <p class="highlight-text">🎯 Objetivo: Aprender a usar la radio para coordinar robots y entender los sistemas multi-agente.</p>
+                    </div>
+                </div>
+                
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Hola a todos! Hoy vamos a dar un paso gigante en robótica: aprenderemos a hacer que dos robots trabajen como uno solo. Ahora, por favor, abran su chat con XOLO y denle un saludo caluroso. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy. No necesitan escribir un prompt especial, solo empiecen a platicar con él sobre cómo los robots se comunican por radio. Pregúntenle cómo un robot puede darle órdenes a otro y qué pasa si el mensaje no llega. ¡XOLO es el experto, así que no se queden con ninguna duda!</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 3: BRAIN SPARK -->
             <div class="activity-card" id="activity-3">
-                <h2>⚡ Actividad 3: PRUEBAS, OBSERVACIÓN Y DEBUGGING COLABORATIVO ⏰ 15 minutos</h2>
-                <p><strong>Propósito</strong> Enseñar a los estudiantes a depurar sistemas multi-agente, enfocándose en problemas de comunicación y sincronización.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Ciclo de Depuración - Falla de Comunicación ⏰ 8 minutos</h3>
-                            <p>(Proyectar Diapositiva 6) Guía a los equipos a través del problema más común: la falla en la transmisión o recepción del mensaje.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant"><strong>Problema:</strong> "El Robot A encuentra el objeto y envía el mensaje, ¡pero el Robot B no se mueve!"</p>
-                                <p class="dialogue assistant"><strong>Análisis Propio:</strong> "Quizás el mensaje no llega o el Robot B no lo entiende."</p>
-                                <p class="dialogue assistant"><strong>Consulta a Xolo:</strong> "Xolo, el Robot B no reacciona al mensaje. Estos son los dos códigos. ¿Qué puede ser?".</p>
-                                <p class="dialogue assistant"><strong>Sugerencia de Xolo:</strong> "¡La comunicación es delicada! Verifiquen 3 cosas: 1. ¿Ambos códigos tienen exactamente el mismo `radio.config(group=1)`? 2. ¿El Robot A envía `radio.send("encontrado")` y el Robot B comprueba `if mensaje == "encontrado"`? ¡Una sola letra diferente y no funcionará! 3. ¿El Robot B tiene un `time.sleep()` en su bucle de escucha para no saturar el procesador?".</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>💡 Actividad 3: Brain Spark</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 20:00</span>
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Ciclo de Depuración - Error de Sincronización ⏰ 7 minutos</h3>
-                            <p>(Proyectar Diapositiva 7) Guía a los estudiantes a través de un problema de lógica donde un robot actúa antes de tiempo.</p>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta la diapositiva 3.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
+                            <li>Entrega por parejas los Robots XGO conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Ayuda a desarrollar una idea y un VIBE que aplique coordinación multi-robot.</li>
+                            <li>Entrega el GCS de la idea del genio.</li>
+                            <li>Resuelve errores de sintaxis o lógica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Trabajar con XOLO una idea y un VIBE para una coreografía sincronizada.</li>
+                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
+                            <li>Depurar su programa con XOLO si hay errores.</li>
+                            <li>Conectar el Micro:Bit al XGO y probar la coreografía.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 3: Brain Spark</h4>
+                    <div class="slide-content">
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"Xolo, quiero diseñar un “Dúo Robótico Sincronizado” como si fueran bailarines. Ayúdame a crear una “partitura de baile” con 3 fases: Fase 1 (solo Robot A): un movimiento de inicio con personalidad.Fase 2 (sincronizado): ambos hacen un gesto coordinado al mismo tiempo.Fase 3 (final): un cierre donde cada robot hace un movimiento diferente pero con ritmo (como un relevo). Quiero que me sugieras 2 estilos de coreografía (ej: Guardianes del Futuro vs Mascotas Divertidas) y que elija una. Después genera el código completo en Python para Robot A y Robot B, incluyendo comentarios, mensajes de radio y tiempos calibrados. Finalmente ayúdame a preparar cómo presentarlo en el “festival”: qué explicar del trabajo en equipo robótico y por qué parece IA aunque es coordinación programada."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant"><strong>Problema:</strong> "El Robot B se mueve antes de tiempo."</p>
-                                <p class="dialogue assistant"><strong>Análisis Propio:</strong> "Está reaccionando a otra cosa, o su código inicial no es esperar."</p>
-                                <p class="dialogue assistant"><strong>Consulta a Xolo:</strong> "Xolo, el Robot B empieza a moverse solo. ¿Por qué?".</p>
-                                <p class="dialogue assistant"><strong>Sugerencia de Xolo:</strong> "Revisen el código del Robot B. Asegúrense de que no haya ningún comando de movimiento fuera del `if mensaje == "encontrado":`. ¡Debe estar completamente quieto hasta que escuche la palabra mágica por la radio!".</p>
-                            </div>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <ul>
+                            <li>¿Los dos robots inician el movimiento exactamente al mismo tiempo?</li>
+                            <li>¿Qué pasa si alejamos los robots más de 5 metros? ¿Siguen recibiendo la señal?</li>
+                            <li>¿Funciona igual si usamos diferentes números de grupo de radio?</li>
+                            <li>Si un robot se queda sin batería y deja de enviar mensajes, ¿cómo afecta esto al sistema multi-agente que crearon?</li>
+                            <li>¿Por qué la comunicación es la base para que un equipo de robots parezca tener una mente colectiva?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Es hora de crear nuestra gran coreografía! Vamos a usar el cerebro de XOLO para idear un baile épico. El flujo es sencillo: primero ideamos el estilo con XOLO, definimos el VIBE, obtenemos el código GCS, lo pasamos a MakeCode y finalmente experimentamos. Por ejemplo, podrían crear un dúo de 'Mascotas Divertidas' donde un robot ladra y el otro salta en respuesta. Prueben su código en el simulador antes de pedirme el hardware. Recuerden las preguntas de experimentación para ver qué tan robusto es su equipo. Si tienen errores o dudas, pregúntenle a XOLO, él los ayudará a depurar.</p>
+                    </div>
+                </div>
+                <div class="challenge-prompt">
+                    <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
+                    <div class="prompt-box">
+                        <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
+                        <p class="challenge-text">"Ya probé con la coreografía básica. ¿Puedes enseñarme cómo hacer que mi XGO use la Smart A.I. Lens para detectar un objeto y avisarle al otro robot por radio para que ambos lo rodeen?"</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 4: GNIUS STORM - COMPARTIR -->
+            <div class="activity-card" id="activity-4">
+                <div class="activity-header">
+                    <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Organiza las parejas para compartir.</li>
+                            <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
+                            <li>Facilita retroalimentación constructiva.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⏸️ XOLO EN ESPERA</p>
+                        <ul>
+                            <li>Disponible solo si hay dudas finales urgentes.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Demuestra su programa funcionando a otra pareja.</li>
+                            <li>Explica qué mensajes de radio funcionan bien para sincronizar.</li>
+                            <li>Comparte un descubrimiento interesante.</li>
+                            <li>Da retroalimentación positiva al compañero.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 4: Think-Pair-Share</h4>
+                    <div class="slide-content tps-structure">
+                        <div class="tps-phase">
+                            <h4>🤔 THINK (30 seg)</h4>
+                            <p>Reflexión individual: ¿Qué movimientos sincronizaron mejor tus robots XGO? ¿Qué te sorprendió de la comunicación por radio?</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>👥 PAIR (2 min)</h4>
+                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi robot XGO coordinó sus movimientos mediante mensajes de radio. Me sorprendió que la sincronización dependiera tanto de los tiempos de espera."</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>💬 SHARE (2 min)</h4>
+                            <p>Retroalimentación mutua y cierre del maestro.</p>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="activity-card" id="activity-4">
-                <h2>⚡ Actividad 4: GNIUS STORM Y REINICIO DEL CICLO ⏰ 10 minutos</h2>
-                <p><strong>Propósito</strong> Celebrar los logros, facilitar una discusión sobre la complejidad de los sistemas multi-agente y fomentar la mejora continua.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Gnius STORM ⏰ 5 minutos</h3>
-                            <p>(Proyectar Diapositiva 8) Facilita un espacio para que los equipos muestren sus misiones colaborativas y discutan los desafíos.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Tiempo de Gnius STORM! Cada grupo, prepárense para demostrar su misión colaborativa. Queremos ver la secuencia: la búsqueda del Robot A, la señal invisible de radio, y la reacción del Robot B. Luego, discutamos: ¿Qué fue lo más difícil de hacer que dos robots trabajaran juntos? ¿Qué pasaría si tuviéramos un equipo de 10 robots? ¿Cómo cambiaría la comunicación?</p>
-                            </div>
-                        </div>
+            <!-- ACTIVIDAD 5: ENTREGA DE EVIDENCIAS -->
+            <div class="activity-card" id="activity-5">
+                <div class="activity-header">
+                    <h2>✅ Actividad 5: Entrega de Evidencias</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Reinicio del Ciclo ⏰ 5 minutos</h3>
-                            <p>(Proyectar Diapositiva 9) Lanza un mini-desafío para ampliar la comunicación del sistema.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Han creado su primer sistema multi-agente! Ahora que funciona, ¿cómo podrían mejorarlo? ¿Podría el Robot B enviar un mensaje de 'misión cumplida' de vuelta al Robot A? Con el tiempo que queda, intenten añadir esa comunicación de regreso. ¡Coordinen con su equipo compañero para la prueba!</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 5 con las instrucciones.</li>
+                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
+                            <li>Felicita al grupo por completar la misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⭕ XOLO FINALIZADO</p>
+                        <ul>
+                            <li>La interacción con XOLO ha terminado para esta misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Tomar screenshot de su código en MakeCode.</li>
+                            <li>Tomar screenshot de su conversación con XOLO.</li>
+                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Dar click en "Finalizar Misión".</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 5: ¡Misión Cumplida!</h4>
+                    <div class="slide-content">
+                        <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
+                        <ol>
+                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
+                        </ol>
+                        <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-
     <script src="script.js"></script>
 </body>
-</html>
+</html></html>
